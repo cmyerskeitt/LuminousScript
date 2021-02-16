@@ -3,7 +3,7 @@ class CreateImages < ActiveRecord::Migration[6.0]
     create_table :images do |t|
       t.string :image_url
       t.string :caption
-      t.integer :user_id
+      t.belongs_to :user, index: true, foreign_key: true
 
       t.timestamps
     end
