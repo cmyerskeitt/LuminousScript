@@ -6,7 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+User.destroy_all
+Image.destroy_all
 
 mom = User.create(name: 'Christine Myers Keitt')
 dad= User.create(name: 'Micheal Myers Keitt')
