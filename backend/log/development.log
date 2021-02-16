@@ -436,3 +436,246 @@ Processing by Rails::InfoController#routes as */*
 Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 6503)
 
 
+Started GET "/" for ::1 at 2021-02-16 11:55:51 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/christinemyerskeitt/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/christinemyerskeitt/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.3ms | Allocations: 315)
+Completed 200 OK in 19ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 1595)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 11:56:01 -0500
+Processing by Api::V1::ImagesController#index as HTML
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 937)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 11:56:01 -0500
+Processing by Api::V1::ImagesController#index as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 79)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 11:56:07 -0500
+Processing by Api::V1::ImagesController#index as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 84)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 11:56:07 -0500
+Processing by Api::V1::ImagesController#index as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 78)
+
+
+Started GET "/api/v1/image" for ::1 at 2021-02-16 11:56:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/image"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/image" for ::1 at 2021-02-16 11:56:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/image"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/images" for ::1 at 2021-02-16 11:56:20 -0500
+Processing by Api::V1::ImagesController#index as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 11:56:20 -0500
+Processing by Api::V1::ImagesController#index as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 78)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 11:57:14 -0500
+Processing by Api::V1::ImagesController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 76)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 11:57:14 -0500
+Processing by Api::V1::ImagesController#index as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 78)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 11:59:22 -0500
+Processing by Api::V1::ImagesController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 76)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 11:59:23 -0500
+Processing by Api::V1::ImagesController#index as */*
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 78)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 11:59:28 -0500
+Processing by Api::V1::ImagesController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 76)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 11:59:29 -0500
+Processing by Api::V1::ImagesController#index as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 78)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:00:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1180)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007fc8361b8630>
+Did you mean?  try):
+  
+app/controllers/api/v1/images_controller.rb:4:in `index'
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:00:19 -0500
+Processing by Api::V1::ImagesController#index as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 558)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007fc838a35248>
+Did you mean?  try):
+  
+app/controllers/api/v1/images_controller.rb:4:in `index'
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:01:05 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as HTML
+  [1m[36mImage Load (1.5ms)[0m  [1m[34mSELECT "images".* FROM "images" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/api/v1/images_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 56212ms (ActiveRecord: 2.8ms | Allocations: 187520)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/api/v1/images_controller.rb:5:in `index'
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:02:02 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/api/v1/image" for ::1 at 2021-02-16 12:02:03 -0500
+Processing by Api::V1::ImagesController#index as HTML
+Started GET "/api/v1/image" for ::1 at 2021-02-16 12:02:19 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/image"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/image" for ::1 at 2021-02-16 12:02:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/image"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:02:22 -0500
+Processing by Api::V1::ImagesController#index as HTML
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 990)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:02:23 -0500
+Processing by Api::V1::ImagesController#index as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 87)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:05:06 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as HTML
+  [1m[36mImage Load (0.9ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 14.9ms | ActiveRecord: 1.9ms | Allocations: 5999)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:05:07 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 944)
+
+
