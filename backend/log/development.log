@@ -679,3 +679,84 @@ Processing by Api::V1::ImagesController#index as */*
 Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 944)
 
 
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:16:45 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ImagesController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 2650)
+
+
+  
+NameError (uninitialized constant Api::V1::ImagesController::Images):
+  
+app/controllers/api/v1/images_controller.rb:4:in `index'
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:16:46 -0500
+Processing by Api::V1::ImagesController#index as */*
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1643)
+
+
+  
+NameError (uninitialized constant Api::V1::ImagesController::Images):
+  
+app/controllers/api/v1/images_controller.rb:4:in `index'
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:19:22 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as HTML
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 886)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:19:22 -0500
+Processing by Api::V1::ImagesController#index as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:19:29 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as HTML
+  [1m[36mImage Load (0.7ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 1.2ms | Allocations: 6085)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:19:29 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 895)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:22:11 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2066)
+
+
+  
+NameError (undefined local variable or method `user_id' for ImageSerializer:Class
+Did you mean?  set_id):
+  
+app/serializers/image_serializer.rb:3:in `<class:ImageSerializer>'
+app/serializers/image_serializer.rb:1:in `<main>'
+app/controllers/api/v1/images_controller.rb:4:in `index'
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:22:11 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 1.7ms | Allocations: 5084)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:22:23 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as HTML
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 1.4ms | Allocations: 5877)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:22:23 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 969)
+
+
