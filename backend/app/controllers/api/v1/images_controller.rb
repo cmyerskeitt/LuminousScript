@@ -13,8 +13,13 @@ class Api::V1::ImagesController < ApplicationController
         end 
     end 
 
+    def show
+        image = Image.find_by_id(params[:id])
+        redirect to api_v1_images_path if !image
+    end 
+
     def destroy
-        image = Images.find_by_id(params[:id])
+        image = Image.find_by_id(params[:id])
         image.destroy 
         redirect_to api_v1_images_path
     end 
