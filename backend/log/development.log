@@ -780,3 +780,23 @@ Processing by Api::V1::ImagesController#index as */*
 Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 2060)
 
 
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:37:13 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ImagesController#index as HTML
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 61ms (Views: 47.4ms | ActiveRecord: 3.5ms | Allocations: 12776)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-16 12:37:14 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.6ms | Allocations: 2052)
+
+
