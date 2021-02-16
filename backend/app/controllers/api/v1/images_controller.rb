@@ -13,6 +13,13 @@ class Api::V1::ImagesController < ApplicationController
         end 
     end 
 
+    def destroy
+        image = Images.find_by_id(params[:id])
+        image.destroy 
+        redirect_to api_v1_images_path
+    end 
+
+
     private 
 
     def image_params 
