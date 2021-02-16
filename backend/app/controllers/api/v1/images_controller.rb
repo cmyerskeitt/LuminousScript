@@ -6,6 +6,11 @@ class Api::V1::ImagesController < ApplicationController
 
     def create 
         image = Image.new(image_params)
+        if image.save
+            render json: image, status: :accepted
+        else 
+            render json: {errors: image.errors.full_messages}, status: :unprocessible_entity
+        end 
     end 
 
     private 
