@@ -15,7 +15,12 @@ class Api::V1::ImagesController < ApplicationController
 
     def show
         image = Image.find_by_id(params[:id])
-        redirect to api_v1_images_path if !image
+        if image
+            render json: image
+        else 
+            redirect_to api_v1_images_path
+            # render json: {errors: image.errors.full_messages}
+        end 
     end 
 
     def destroy
