@@ -11,12 +11,14 @@ function getImages(){
             images.data.forEach(image => {
                 const imageMarkup = `
                     <div data-id=${image.id}>
-                        <img src=${image.attributes.image_url} height="200" width="250">
+                        <img src=${image.attributes.image_url} height="300" width="350">
                         <h3>${image.attributes.caption}</h3>
                         <p>${image.attributes.user.name}</p>
                         <button data-id=${image.id}>delete</button>
-                    </div>`
-        
+                    </div>
+                    <br><br>`
+
+                    document.querySelector('#image-container').innerHTML += imageMarkup
             })
         })
 }
