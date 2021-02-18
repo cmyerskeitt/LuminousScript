@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     getImages()
     
     const createImageForm = document.querySelector("#add-image-form")
-    createImageForm.addEventListener("submit", (e) => (createFormHandler(e)))
+    createImageForm.addEventListener("submit", (e, user_id) => (createFormHandler(e)))
    
 
 })
@@ -30,8 +30,14 @@ function getImages(){
 
 function createFormHandler(e) {
     e.preventDefault()
-    debugger
     const imageInput = document.querySelector('#input-url').value
     const captionInput = document.querySelector('#input-caption').value
-    postFetch(imageInput, captionInput)
+    postFetch(imageInput, captionInput, user_id)
+}
+//How do I pass in the user_id?
+
+function postFetch(image, caption, user_id){
+    fetch(endPoint)
+
+
 }
