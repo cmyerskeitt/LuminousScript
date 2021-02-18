@@ -2,6 +2,11 @@ const endPoint = "http://localhost:3000/api/v1/images"
 
 document.addEventListener("DOMContentLoaded", () => {
     getImages()
+    
+    const createImageForm = document.querySelector("#add-image-form")
+    createImageForm.addEventListener("submit", (e) => (console.log(e)))
+   
+
 })
 
 function getImages(){
@@ -22,3 +27,5 @@ function getImages(){
             })
         })
 }
+
+e.preventDefault()

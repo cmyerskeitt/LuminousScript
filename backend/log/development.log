@@ -2742,3 +2742,928 @@ FOREIGN KEY ("user_id")
   [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+Started GET "/api/v1/users" for ::1 at 2021-02-17 15:30:57 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 57ms (Views: 43.9ms | ActiveRecord: 2.9ms | Allocations: 11498)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-17 15:30:57 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 2.1ms | Allocations: 4159)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-17 16:13:30 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as HTML
+  [1m[36mImage Load (0.7ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 1.6ms | Allocations: 6448)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-17 16:13:34 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 2069)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-17 16:20:04 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 1.9ms | Allocations: 4191)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-17 16:20:05 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.5ms | Allocations: 4158)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-17 16:24:30 -0500
+Processing by Api::V1::ImagesController#index as HTML
+  [1m[36mImage Load (1.9ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 2.2ms | Allocations: 2098)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-17 16:24:31 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 2051)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-17 16:28:17 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.5ms | Allocations: 2051)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 08:49:50 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 16.6ms | ActiveRecord: 1.8ms | Allocations: 2084)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 08:50:46 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.6ms | Allocations: 2051)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:32:49 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (1.6ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 2.3ms | Allocations: 2084)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:33:26 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.6ms | Allocations: 2051)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:33:28 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.6ms | Allocations: 2051)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:37:24 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 2051)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:37:45 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 2051)
+
+
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "images"[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "images" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "image_url" varchar, "caption" varchar, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX "index_images_on_user_id" ON "images" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aimages" ("id" integer NOT NULL PRIMARY KEY, "image_url" varchar DEFAULT NULL, "caption" varchar DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_aimages_on_user_id" ON "aimages" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aimages" ("id","image_url","caption","user_id","created_at","updated_at")
+                     SELECT "id","image_url","caption","user_id","created_at","updated_at" FROM "images"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "images"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "images" ("id" integer NOT NULL PRIMARY KEY, "image_url" varchar DEFAULT NULL, "caption" varchar DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_19cd822056"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_images_on_user_id" ON "images" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "images" ("id","image_url","caption","user_id","created_at","updated_at")
+                     SELECT "id","image_url","caption","user_id","created_at","updated_at" FROM "aimages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aimages"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210215214051)[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210215213921);
+
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-18 14:43:12.531151"], ["updated_at", "2021-02-18 14:43:12.531151"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "aa4d7ed9f6323128854cd6f8eab8786c2d2297c9"], ["created_at", "2021-02-18 14:43:12.547069"], ["updated_at", "2021-02-18 14:43:12.547069"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "images"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "images" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "image_url" varchar, "caption" varchar, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX "index_images_on_user_id" ON "images" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aimages" ("id" integer NOT NULL PRIMARY KEY, "image_url" varchar DEFAULT NULL, "caption" varchar DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aimages_on_user_id" ON "aimages" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aimages" ("id","image_url","caption","user_id","created_at","updated_at")
+                     SELECT "id","image_url","caption","user_id","created_at","updated_at" FROM "images"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "images" ("id" integer NOT NULL PRIMARY KEY, "image_url" varchar DEFAULT NULL, "caption" varchar DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_19cd822056"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_images_on_user_id" ON "images" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "images" ("id","image_url","caption","user_id","created_at","updated_at")
+                     SELECT "id","image_url","caption","user_id","created_at","updated_at" FROM "aimages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aimages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210215214051)[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210215213921);
+
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-18 14:43:12.621838"], ["updated_at", "2021-02-18 14:43:12.621838"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-02-18 14:43:12.626558"], ["key", "environment"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "aa4d7ed9f6323128854cd6f8eab8786c2d2297c9"], ["created_at", "2021-02-18 14:43:12.631349"], ["updated_at", "2021-02-18 14:43:12.631349"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Christine Myers Keitt"], ["created_at", "2021-02-18 14:43:12.663964"], ["updated_at", "2021-02-18 14:43:12.663964"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Micheal Myers Keitt"], ["created_at", "2021-02-18 14:43:12.669081"], ["updated_at", "2021-02-18 14:43:12.669081"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Micheal Myers Keitt Jr"], ["created_at", "2021-02-18 14:43:12.674043"], ["updated_at", "2021-02-18 14:43:12.674043"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mImage Create (0.3ms)[0m  [1m[32mINSERT INTO "images" ("image_url", "caption", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image_url", "https://images.unsplash.com/photo-1508205065970-cad01cebebb4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"], ["caption", "A mother's love"], ["user_id", 1], ["created_at", "2021-02-18 14:43:12.690973"], ["updated_at", "2021-02-18 14:43:12.690973"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mImage Create (0.3ms)[0m  [1m[32mINSERT INTO "images" ("image_url", "caption", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image_url", "https://images.unsplash.com/photo-1547226846-000337daf073?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBkYWRkeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=60"], ["caption", "A father's love"], ["user_id", 2], ["created_at", "2021-02-18 14:43:12.696654"], ["updated_at", "2021-02-18 14:43:12.696654"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mImage Create (0.3ms)[0m  [1m[32mINSERT INTO "images" ("image_url", "caption", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image_url", "https://images.unsplash.com/photo-1600880291599-c5eca68b88b0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGJsYWNrJTIwdG9kZGxlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60"], ["caption", "Why so serious?"], ["user_id", 3], ["created_at", "2021-02-18 14:43:12.701917"], ["updated_at", "2021-02-18 14:43:12.701917"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mImage Create (0.3ms)[0m  [1m[32mINSERT INTO "images" ("image_url", "caption", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image_url", "https://images.unsplash.com/photo-1581297756481-dc9be2ad5583?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjh8fGJsYWNrJTIwdG9kZGxlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60"], ["caption", "Naptime?"], ["user_id", 3], ["created_at", "2021-02-18 14:43:12.715989"], ["updated_at", "2021-02-18 14:43:12.715989"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:43:46 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as HTML
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 1.4ms | Allocations: 5647)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:43:46 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 1.0ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:44:10 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 1.3ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:44:25 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 1.6ms | Allocations: 5614)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:44:26 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 1.3ms | Allocations: 5614)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:44:27 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 1.3ms | Allocations: 5614)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:44:54 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 1.1ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:44:54 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 1.5ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:45:01 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.8ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:45:39 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 1.2ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:48:17 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.7ms | Allocations: 5616)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:49:14 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 1.2ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:51:35 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 1.0ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:52:26 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.9ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:54:16 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.9ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:55:44 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.5ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 1.1ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 09:59:14 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 1.1ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 10:00:04 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.9ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 10:04:50 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.9ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 10:06:09 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (1.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 2.0ms | Allocations: 5614)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 10:06:15 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 1.0ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 10:07:13 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 1.0ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 10:07:27 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 1.0ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 10:12:10 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 1.0ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 10:12:57 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.8ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 10:13:06 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.8ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 10:13:13 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.7ms | Allocations: 5616)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 10:39:31 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (1.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 55ms (Views: 49.9ms | ActiveRecord: 3.2ms | Allocations: 5646)
+
+
+Started GET "/" for ::1 at 2021-02-18 11:56:51 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/christinemyerskeitt/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/christinemyerskeitt/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 21.9ms | Allocations: 315)
+Completed 200 OK in 48ms (Views: 33.8ms | ActiveRecord: 0.0ms | Allocations: 1589)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 12:46:26 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.9ms | Allocations: 5646)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 12:46:41 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 2.0ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 12:46:57 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 1.0ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 13:02:34 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 65ms (Views: 52.7ms | ActiveRecord: 2.9ms | Allocations: 16327)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 13:15:43 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 1.2ms | Allocations: 5659)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 13:15:52 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 1.1ms | Allocations: 5633)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 13:18:34 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 1.1ms | Allocations: 5632)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 13:18:38 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 1.1ms | Allocations: 5632)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 13:18:40 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 1.1ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 13:19:05 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.9ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 13:19:06 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 1.1ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 13:19:07 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.4ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 1.3ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 13:19:10 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 1.1ms | Allocations: 5613)
+
+
