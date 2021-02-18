@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     getImages()
     
     const createImageForm = document.querySelector("#add-image-form")
-    createImageForm.addEventListener("submit", (e) => (console.log(e)))
+    createImageForm.addEventListener("submit", (e) => (createFormHandler(e)))
    
 
 })
@@ -28,4 +28,10 @@ function getImages(){
         })
 }
 
-e.preventDefault()
+function createFormHandler(e) {
+    e.preventDefault()
+    debugger
+    const imageInput = document.querySelector('#input-url').value
+    const captionInput = document.querySelector('#input-caption').value
+    postFetch(imageInput, captionInput)
+}
