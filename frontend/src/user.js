@@ -7,4 +7,8 @@ class User {
         this.images = user.images
         user.allusers.push(this)
     }
+
+    static fakelogin(){
+        
+    }
 }
