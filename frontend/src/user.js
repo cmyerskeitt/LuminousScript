@@ -1,14 +1,18 @@
 class User {
-    static allusers =[]
+    static allUsers =[]
 
     constructor(user){
         this.id = user.id
         this.name = user.name
         this.images = user.images
-        user.allusers.push(this)
+        user.allUsers.push(this)
     }
 
-    static fakelogin(){
-        
+    static fakeLogin(){
+        const newUserForm = document.querySelector('#new-user-form')
+        newUserForm.addEventListener('submit', function(e){
+            e.preventDefault()
+            apiService.fetchOrCreateUser(e)
+        })
     }
 }
