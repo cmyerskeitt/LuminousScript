@@ -3808,3 +3808,469 @@ Processing by Api::V1::ImagesController#index as */*
 Completed 200 OK in 24ms (Views: 19.0ms | ActiveRecord: 2.7ms | Allocations: 5646)
 
 
+Started GET "/api/v1/images" for ::1 at 2021-02-18 15:17:39 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 34ms (Views: 28.4ms | ActiveRecord: 2.4ms | Allocations: 5646)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 15:53:37 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (1.7ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 98ms (Views: 91.4ms | ActiveRecord: 3.1ms | Allocations: 5649)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 15:53:46 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 1.1ms | Allocations: 5613)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-18 15:55:37 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.7ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 1.4ms | Allocations: 5613)
+
+
+Started POST "/api/v1/images" for ::1 at 2021-02-18 15:55:43 -0500
+Processing by Api::V1::ImagesController#create as */*
+  Parameters: {"image_url"=>"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUTEhMWFhUXGBoYGBgYGBgYGhoZFxcdGBYaFxoZHiggGB0lHRgaITMhJSkrLi4uGiAzODMtNygtLisBCgoKDg0OGxAQGy0mICU1LS01LS8tLS8vLTAtLS8tLTUvLS0tLS0tMC8vLy01LSsvLS0tLS02LS0tLS0tLy0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAFBgAEAgMHAQj/xAA+EAACAQIEBAUCBAMIAgIDAQABAhEAAwQSITEFQVFhBhMicYEykUKhscFS0fAHFCMzYnKS4YLxFUNTorIW/8QAGgEAAgMBAQAAAAAAAAAAAAAAAwQAAQIFBv/EADMRAAICAQMCBAQFBAIDAAAAAAECABEDEiExBEETUWHwInGBoTKRscHRBULh8RRSIzNT/9oADAMBAAIRAxEAPwDj/HOEXcNda3cVhqcpZSudfwsAeRH22ofXTvGXDsXjbaXEw192H4vU0ACCMhEqZ0ieVc2xOHe2xR1ZWUwVYEEHoQdRS3S9QMqbkau4Bhs+LQ23E01K9qU3AyVKle1JJ5Ur2pVySVKle1ckleqtZItEMJgyas8SSpbw5NWreAJ5Ux8O4KTGlN3D/BrMhJhSNgdCevty+9AbJU0FnMxw09Kwfh56V1u/4NyhYIadDA2P7jvWjHeCnAlYbsNSP+u9Z8WXpnIbuGIquy10Djvhp7JysNYnroaUsbg8tGVgZkiCqlZutYiiVMzypFbUtzW9cMakkp1KtthjUs4WSf1/rvA+RWSwl1KoU0Zs+IsWmHGGW+62QZyA5dZzbjXeTvVK0uRvUBI5MDv0I0Papir2Zid57R+XL/qoGK/OVVyrJO8144rJ26V6lwAQFE8yTP2G33n4qXfJkhfgrYdjLJlZVXmWzEH1OJ2aYMbQI5k1suqjXWP0C4NJiRcnlEEb7TzFAbblTIMEb", "caption"=>"tester", "image"=>{"image_url"=>"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUTEhMWFhUXGBoYGBgYGBgYGhoZFxcdGBYaFxoZHiggGB0lHRgaITMhJSkrLi4uGiAzODMtNygtLisBCgoKDg0OGxAQGy0mICU1LS01LS8tLS8vLTAtLS8tLTUvLS0tLS0tMC8vLy01LSsvLS0tLS02LS0tLS0tLy0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAFBgAEAgMHAQj/xAA+EAACAQIEBAUCBAMIAgIDAQABAhEAAwQSITEFQVFhBhMicYEykUKhscFS0fAHFCMzYnKS4YLxFUNTorIW/8QAGgEAAgMBAQAAAAAAAAAAAAAAAwQAAQIFBv/EADMRAAICAQMCBAQFBAIDAAAAAAECABEDEiExBEETUWHwInGBoTKRscHRBULh8RRSIzNT/9oADAMBAAIRAxEAPwDj/HOEXcNda3cVhqcpZSudfwsAeRH22ofXTvGXDsXjbaXEw192H4vU0ACCMhEqZ0ieVc2xOHe2xR1ZWUwVYEEHoQdRS3S9QMqbkau4Bhs+LQ23E01K9qU3AyVKle1JJ5Ur2pVySVKle1ckleqtZItEMJgyas8SSpbw5NWreAJ5Ux8O4KTGlN3D/BrMhJhSNgdCevty+9AbJU0FnMxw09Kwfh56V1u/4NyhYIadDA2P7jvWjHeCnAlYbsNSP+u9Z8WXpnIbuGIquy10Djvhp7JysNYnroaUsbg8tGVgZkiCqlZutYiiVMzypFbUtzW9cMakkp1KtthjUs4WSf1/rvA+RWSwl1KoU0Zs+IsWmHGGW+62QZyA5dZzbjXeTvVK0uRvUBI5MDv0I0Papir2Zid57R+XL/qoGK/OVVyrJO8144rJ26V6lwAQFE8yTP2G33n4qXfJkhfgrYdjLJlZVXmWzEH1OJ2aYMbQI5k1suqjXWP0C4NJiRcnlEEb7TzFAbblTIMEb", "caption"=>"tester"}}
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms | Allocations: 3985)
+
+
+  
+ArgumentError (Unrecognized status code :unprocessible_entity):
+  
+app/controllers/api/v1/images_controller.rb:12:in `create'
+Started GET "/rails/info/routes" for ::1 at 2021-02-21 13:39:26 -0500
+Started GET "/api/v1/images" for ::1 at 2021-02-21 13:39:26 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::ImagesController#index as HTML
+  [1m[36mImage Load (1.1ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 51ms (Views: 45.9ms | ActiveRecord: 2.1ms | Allocations: 5858)
+
+
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/christinemyerskeitt/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/christinemyerskeitt/.rvm/gems/ruby-2.6.1/gems/actionpack-6.0.3.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (Duration: 21.2ms | Allocations: 3269)
+  Rendered /Users/christinemyerskeitt/.rvm/gems/ruby-2.6.1/gems/actionpack-6.0.3.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 9.7ms | Allocations: 930)
+  Rendered /Users/christinemyerskeitt/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 42.3ms | Allocations: 6189)
+Completed 200 OK in 225ms (Views: 60.9ms | ActiveRecord: 0.0ms | Allocations: 8065)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-21 13:39:27 -0500
+Started GET "/rails/info/routes" for ::1 at 2021-02-21 13:39:27 -0500
+Processing by Api::V1::ImagesController#index as */*
+Processing by Rails::InfoController#routes as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/christinemyerskeitt/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  Rendered collection of /Users/christinemyerskeitt/.rvm/gems/ruby-2.6.1/gems/actionpack-6.0.3.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (Duration: 12.9ms | Allocations: 3242)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  Rendered /Users/christinemyerskeitt/.rvm/gems/ruby-2.6.1/gems/actionpack-6.0.3.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 2.7ms | Allocations: 920)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 1.2ms | Allocations: 12638)
+
+
+  Rendered /Users/christinemyerskeitt/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 29.4ms | Allocations: 9704)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.0ms | Allocations: 12881)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-02-21 13:39:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2021-02-21 13:39:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.5) lib/rack/cors.rb:98:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/users" for ::1 at 2021-02-21 22:05:26 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>{"0"=>{}, "1"=>{}}}}
+[31mUnpermitted parameter: :name[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+[31mUnpermitted parameter: :name[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2021-02-22 03:05:26.684245"], ["updated_at", "2021-02-22 03:05:26.684245"]]
+  ↳ app/controllers/api/v1/users_controller.rb:14:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14:in `create'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:15:in `create'
+Completed 200 OK in 53ms (Views: 18.7ms | ActiveRecord: 5.2ms | Allocations: 10705)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-21 22:06:56 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>{"0"=>{}, "1"=>{}}}}
+[31mUnpermitted parameter: :name[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+[31mUnpermitted parameter: :name[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/api/v1/users/4
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1579)
+
+
+Started GET "/api/v1/users/4" for ::1 at 2021-02-21 22:06:56 -0500
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"4", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:21:in `show'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1800)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-21 22:11:05 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 127)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:27:in `user_params'
+app/controllers/api/v1/users_controller.rb:10:in `create'
+Started POST "/api/v1/users" for ::1 at 2021-02-21 22:16:06 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 500 Internal Server Error in 61873ms (ActiveRecord: 0.0ms | Allocations: 270185)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/users_controller.rb:11:in `create'
+Started POST "/api/v1/users" for ::1 at 2021-02-21 22:17:21 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 173)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/api/v1/users_controller.rb:28:in `user_params'
+app/controllers/api/v1/users_controller.rb:10:in `create'
+Started POST "/api/v1/users" for ::1 at 2021-02-21 22:26:12 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Christine"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Christine"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 29589ms (ActiveRecord: 1.3ms | Allocations: 48605)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/users_controller.rb:15:in `create'
+Started GET "/api/v1/images" for ::1 at 2021-02-22 15:07:21 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ImagesController#index as HTML
+  [1m[36mImage Load (1.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 77ms (Views: 63.7ms | ActiveRecord: 3.0ms | Allocations: 16328)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-22 15:07:22 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.8ms | Allocations: 5614)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-02-22 15:08:43 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Christine"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Christine"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 46034ms (ActiveRecord: 0.3ms | Allocations: 49077)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/users_controller.rb:15:in `create'
+Started POST "/api/v1/users" for ::1 at 2021-02-22 15:19:30 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Bruno "}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Bruno "], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Bruno "], ["created_at", "2021-02-22 20:19:30.472975"], ["updated_at", "2021-02-22 20:19:30.472975"]]
+  ↳ app/controllers/api/v1/users_controller.rb:14:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 1732999ms (ActiveRecord: 3.6ms | Allocations: 150883)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/users_controller.rb:16:in `create'
+Started POST "/api/v1/users" for ::1 at 2021-02-22 15:48:52 -0500
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Bruno "}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Bruno "], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Bruno "], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/api/v1/users/5
+Completed 302 Found in 42ms (ActiveRecord: 2.4ms | Allocations: 4654)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-22 15:49:51 -0500
+Processing by Api::V1::ImagesController#index as HTML
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 21.7ms | ActiveRecord: 1.1ms | Allocations: 11892)
+
+
+Started GET "/api/v1/images" for ::1 at 2021-02-22 15:49:52 -0500
+Processing by Api::V1::ImagesController#index as */*
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images"[0m
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/images_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 1.1ms | Allocations: 5614)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-22 15:50:03 -0500
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 1.3ms | Allocations: 7420)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-22 15:50:05 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 1.3ms | Allocations: 6454)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+Started GET "/api/v1/users/5" for ::1 at 2021-02-22 15:51:32 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"5", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `show'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:21:in `show'
+Completed 200 OK in 27ms (Views: 14.9ms | ActiveRecord: 1.9ms | Allocations: 7688)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-22 15:51:57 -0500
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 1.6ms | Allocations: 5404)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-22 15:51:57 -0500
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "images"."id" FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.9ms | Allocations: 5371)
+
+
