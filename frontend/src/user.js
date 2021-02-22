@@ -12,7 +12,7 @@ class User {
         const newUserForm = document.querySelector('#new-user-form')
         newUserForm.addEventListener('submit', function(e){
             e.preventDefault()
-            apiService.fetchOrCreateUser(e)
+            apiService.locateOrCreateUser(e)
         })
     }
 }

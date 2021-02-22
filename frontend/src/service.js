@@ -4,6 +4,23 @@ class ApiService {
         this.baseUrl = "http://localhost:3000/api/v1"
     }
 
-    fetchOrCreateUser(){
+    locateOrCreateUser(e){
+        return fetch(`${this.baseUrl}/users`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({
+                user: {
+                    name: e.target
+                }
+            })
+        })
+        .then(resp =>{
+            let json = resp.json()
+            console.log(json)
+            return json
+        })
     }
 }
