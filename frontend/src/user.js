@@ -15,7 +15,7 @@ class User {
             apiService.locateOrCreateUser(e)
             .then(user => {
                 console.log(user)
-                let newUser = new User(user)
+                let newUser = new User(user.data.attributes)
                 newUser.showUser()
             })
         })
@@ -24,5 +24,8 @@ class User {
     showUser(){
         let body = document.querySelector('#user-container')
         body.innerHTML = ''
+        let UserWelcome = document.createElement('p')
+        UserWelcome.innerHTML = `<h1>Welcome back, ${this.name}!</h1>`
+        body.append(UserWelcome)
     }
 }
