@@ -5,7 +5,7 @@ class User {
         this.id = user.id
         this.name = user.name
         this.images = user.images
-        user.allUsers.push(this)
+        User.allUsers.push(this)
     }
 
     static fakeLogin(){
@@ -15,7 +15,14 @@ class User {
             apiService.locateOrCreateUser(e)
             .then(user => {
                 console.log(user)
+                let newUser = new User(user)
+                newUser.showUser()
             })
         })
+    }
+
+    showUser(){
+        let body = document.querySelector('#user-container')
+        body.innerHTML = ''
     }
 }
