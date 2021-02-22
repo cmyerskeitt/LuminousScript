@@ -13,6 +13,9 @@ class User {
         newUserForm.addEventListener('submit', function(e){
             e.preventDefault()
             apiService.locateOrCreateUser(e)
+            .then(user => {
+                console.log(user)
+            })
         })
     }
 }

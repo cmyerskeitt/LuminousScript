@@ -13,7 +13,7 @@ class ApiService {
             },
             body: JSON.stringify({
                 user: {
-                    name: e.target
+                    name: e.target.children[1].value
                 }
             })
         })
