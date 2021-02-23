@@ -10,7 +10,22 @@ class Image {
         Images.allImages.push(this)
     }
 
-    static newImages
+    static newImagesForm(){
+        let form = 
+            <form id="add-image-form" style="">
+                <h3>Add a Lumunious Image!</h3>
+                <input id='input-url' type="text" name="image" value=""
+                placeholder="Enter your image URL here." class="input-text">
+                <br><br>
+                <input id='input-caption' type="text" name="caption" value=""
+                placeholder="Enter your caption here." class="input-text">
+                <br><br>
+                <input id= "create-button" type="submit" name="submit" value="Create Luminous Image"
+                class="submit">
+                <br><br>
+            </form>
+        
+    }
 }
 
 
@@ -83,17 +98,3 @@ function postFetch(image_url, caption){
 }
 
 
-
-// <!-- <form id="add-image-form" style="">
-// <h3>Add a Lumunious Image!</h3>
-
-// <input id='input-url' type="text" name="image" value=""
-// placeholder="Enter your image URL here." class="input-text">
-// <br><br>
-// <input id='input-caption' type="text" name="caption" value=""
-// placeholder="Enter your caption here." class="input-text">
-// <br><br>
-// <input id= "create-button" type="submit" name="submit" value="Create Luminous Image"
-// class="submit">
-// <br><br>
-// </form> -->
