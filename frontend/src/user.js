@@ -28,4 +28,6 @@ class User {
         UserWelcome.innerHTML = `<h1>Welcome back, ${this.name}!</h1>`
         body.append(UserWelcome)
     }
+
+    
 }

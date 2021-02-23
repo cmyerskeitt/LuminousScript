@@ -1,4 +1,33 @@
 
+class Image {
+    static allImages = []
+
+    constructor(image){
+        this.id = image.id 
+        this.image_url = image.image_url
+        this.caption = image.caption
+        this.user_id = image_user_id
+        Images.allImages.push(this)
+    }
+
+    static newImages
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const endPoint = "http://localhost:3000/api/v1/images"
 
 document.addEventListener("DOMContentLoaded", () => {
