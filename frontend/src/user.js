@@ -27,7 +27,18 @@ class User {
         let UserWelcome = document.createElement('p')
         UserWelcome.innerHTML = `<h1>Welcome back, ${this.name}!</h1>`
         body.append(UserWelcome)
+        this.renderImages()
+        Image.newImageForm(this.id)
     }
 
-    
+    // renderImages(){
+    //     if(this.images){
+    //         this.images.forEach(function(image){
+    //             let newImage = new Image(image)
+    //             // newImage.( I need to find a way to add image cards to page)
+    //         })
+    //     }
+    // }
+
+
 }

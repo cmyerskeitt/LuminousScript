@@ -11,6 +11,7 @@ class Image {
     }
 
     static newImagesForm(){
+        let body = document.querySelector('#user-container')
         let form = 
             <form id="add-image-form" style="">
                 <h3>Add a Lumunious Image!</h3>
@@ -24,6 +25,11 @@ class Image {
                 class="submit">
                 <br><br>
             </form>
+        body.innerHTML(form)
+
+    }
+
+    createImageCard{
         
     }
 }
