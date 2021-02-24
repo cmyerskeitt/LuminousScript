@@ -7,7 +7,7 @@ class Image {
         this.image_url = image.image_url
         this.caption = image.caption
         this.user_id = image.user_id
-        Images.allImages.push(this)
+        Image.allImages.push(this)
     }
 
     static newImagesForm(){
@@ -32,13 +32,13 @@ class Image {
     createImageCard(){
         let card = document.createElement('p')
             card.innerHTML=
-            `<div data-id=${image.id}>
-            <img src=${image.attributes.image_url} height="300" width="350">
-            <h3>${image.attributes.caption}</h3>
-            <p>${image.attributes.user.name}</p>
-            <button data-id=${image.id}>delete</button>
+            `<div data-id=${this.id}>
+            <img src=${this.image_url} height="300" width="350">
+            <h3>${this.caption}</h3>
+            <p>${this.user_id.name}</p>
+            <button data-id=${this.id}>delete</button>
             </div>`
-        console.log(card)     
+        console.log(card.innerHTML)     
         
     }
 }
