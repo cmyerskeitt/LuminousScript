@@ -13,7 +13,7 @@ class Image {
     static newImagesForm(){
         let body = document.querySelector('#user-container')
         let form = 
-            <form id="add-image-form" style="">
+           <form id="add-image-form" style="">
                 <h3>Add a Lumunious Image!</h3>
                 <input id='input-url' type="text" name="image" value=""
                 placeholder="Enter your image URL here." class="input-text">
@@ -30,15 +30,15 @@ class Image {
     }
 
     createImageCard(){
-        let i = document.createElement('p')
-        i.innerHTML=
+        let card = document.createElement('p')
+            card.innerHTML=
             `<div data-id=${image.id}>
             <img src=${image.attributes.image_url} height="300" width="350">
             <h3>${image.attributes.caption}</h3>
             <p>${image.attributes.user.name}</p>
             <button data-id=${image.id}>delete</button>
             </div>`
-        console.log(i)     
+        console.log(card)     
         
     }
 }
