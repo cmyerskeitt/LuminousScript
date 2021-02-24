@@ -31,14 +31,17 @@ class User {
         Image.newImageForm(this.id)
     }
 
-    // renderImages(){
-    //     if(this.images){
-    //         this.images.forEach(function(image){
-    //             let newImage = new Image(image)
-    //             // newImage.( I need to find a way to add image cards to page)
-    //         })
-    //     }
-    // }
+    renderImages(){
+        if (this.images){
+
+            this.images.forEach(function(image){
+                console.log(image)
+                let newImage = new Image(image)
+                console.log(newImage)
+                newImage.createImageCard()
+            })
+        }
+    }
 
 
 }
