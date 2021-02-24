@@ -10,32 +10,36 @@ class Image {
         Image.allImages.push(this)
     }
 
-    static newImagesForm(){
+    static newImageForm(){
+        console.log(this)
         let body = document.querySelector('#user-container')
         let form = 
             `<form id="add-image-form" style="">
                 <h3>Add a Lumunious Image!</h3>
+                <label>Image Url:</label>
                 <input id='input-url' type="text" name="image" value=""
                 placeholder="Enter your image URL here." class="input-text">
                 <br><br>
+                <label>Caption:</label>
                 <input id='input-caption' type="text" name="caption" value=""
                 placeholder="Enter your caption here." class="input-text">
                 <br><br>
                 <input id= "create-button" type="submit" name="submit" value="Create Luminous Image"
                 class="submit">
                 <br><br>
-            </form> `
-        body.innerHTML(form)
-
+            </form>`
+        body.insertAdjacentHTML('beforeend', form)
+       Image.makeImage()
     }
 
     createImageCard(){
         let card = document.createElement('p')
+            console.log(this)
             card.innerHTML=
             `<div data-id=${this.id}>
             <img src=${this.image_url} height="300" width="350">
             <h3>${this.caption}</h3>
-            <p>${this.user_id.name}</p>
+            <p>${this.user_id}</p>
             <button data-id=${this.id}>delete</button>
             </div>`
         console.log(card.innerHTML)     
