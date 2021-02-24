@@ -32,6 +32,15 @@ class Image {
        Image.makeImage()
     }
 
+    static makeImage(){
+        let newForm = document.getElementById('add-image-form')
+        newForm.addEventListener('submit', function(e){
+            e.preventDefault
+            
+        })
+    }
+
+
     createImageCard(){
         let card = document.createElement('p')
             console.log(this)
