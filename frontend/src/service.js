@@ -39,8 +39,6 @@ class ApiService {
                     }
                 })
         })
-         .then(resp =>{
-             let json =resp.json()
-             return json})
+         .then(resp => resp.json())
     }
 }    

@@ -38,6 +38,10 @@ class Image {
         newForm.addEventListener('submit', function(e){
             e.preventDefault()
             apiService.postImage(e, user_id)
+            .then (json => {
+                console.log(json)
+                
+            })
             
         })
     }
