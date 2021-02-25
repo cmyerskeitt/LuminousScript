@@ -51,8 +51,13 @@ class Image {
             <p>${this.user_id}</p>
             <button data-id=${this.id}>delete</button>
             </div>`
-        console.log(card.innerHTML)     
+        this.appendImages(card)
         
+    }
+
+    appendImages(card){
+        let images = document.getElementsByClassName('image-form-container')
+        images[0].append(card)
     }
 }
 

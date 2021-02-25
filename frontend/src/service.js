@@ -24,6 +24,10 @@ class ApiService {
         })
     }
 
+    postImage(e, user_id){
+        
+    }
+
     
 
 
