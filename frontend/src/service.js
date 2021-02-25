@@ -1,7 +1,7 @@
 class ApiService {
 
     constructor(){
-        this.baseUrl = "http://localhost:3000/api/v1"
+        this.baseUrl = `http://localhost:3000/api/v1`
     }
 
     locateOrCreateUser(e){
@@ -25,10 +25,20 @@ class ApiService {
     }
 
     postImage(e, user_id){
-        
+     return fetch(`${this.baseUrl}/images`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            image: {
+                    image_url: e.target.children[2].value,
+                    caption: e.target.children[6].value,
+                    user_id: user_id
+                    }
+                })
+        })
+         .then(resp => resp.json())
     }
-
-    
-
-
-}
+}    

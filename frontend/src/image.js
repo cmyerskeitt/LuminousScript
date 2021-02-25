@@ -7,10 +7,11 @@ class Image {
         this.image_url = image.image_url
         this.caption = image.caption
         this.user_id = image.user_id
+        console.log(image)
         Image.allImages.push(this)
     }
 
-    static newImageForm(){
+    static newImageForm(user_id){
         console.log(this)
         let body = document.querySelector('#user-container')
         let form = 
@@ -29,13 +30,15 @@ class Image {
                 <br><br>
             </form>`
         body.insertAdjacentHTML('beforeend', form)
-       Image.makeImage()
+        console.log(body)
+       Image.makeImage(user_id)
     }
 
-    static makeImage(){
+    static makeImage(user_id){
         let newForm = document.getElementById('add-image-form')
         newForm.addEventListener('submit', function(e){
-            e.preventDefault
+            e.preventDefault()
+            apiService.postImage(e, user_id)
             
         })
     }
@@ -48,7 +51,6 @@ class Image {
             `<div data-id=${this.id}>
             <img src=${this.image_url} height="300" width="350">
             <h3>${this.caption}</h3>
-            <p>${this.user_id}</p>
             <button data-id=${this.id}>delete</button>
             </div>`
         this.appendImages(card)
@@ -61,73 +63,5 @@ class Image {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const endPoint = "http://localhost:3000/api/v1/images"
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     getImages()
-    
-//     const createImageForm = document.querySelector("#add-image-form")
-//     createImageForm.addEventListener("submit", (e) => (createFormHandler(e)))
-   
-
-// })
-
-// function getImages(){
-//     fetch(endPoint)
-//         .then(response => response.json())
-//         .then(images => {
-//             images.data.forEach(image => {
-//                 const imageMarkup = `
-//                     <div data-id=${image.id}>
-//                         <img src=${image.attributes.image_url} height="300" width="350">
-//                         <h3>${image.attributes.caption}</h3>
-//                         <p>${image.attributes.user.name}</p>
-//                         <button data-id=${image.id}>delete</button>
-//                     </div>
-//                     <br><br>`
-
-//                     document.querySelector('#image-container').innerHTML += imageMarkup
-//             })
-//         })
-// }
-
-// function createFormHandler(e) {
-//     e.preventDefault()
-//     const imageInput = document.querySelector('#input-url').value
-//     const captionInput = document.querySelector('#input-caption').value
-//     postFetch(imageInput, captionInput)
-// }
-// // How do I get access to the user_id?
-
-// function postFetch(image_url, caption){
-//     fetch(endPoint, {
-//         method: "POST",
-//         headers: {"Content-Type": "application/json"},
-//         body: JSON.stringify({
-//             image_url: image_url,
-//             caption: caption,
-//     })
-// })
-//     .then(response => response.json())
-//     .then(image => {
-//         console.log(image)
-//     })
-  
-// }
 
 

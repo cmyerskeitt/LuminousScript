@@ -22,11 +22,14 @@ class User {
     }
 
     showUser(){
+        console.log(this)
         let body = document.querySelector('#user-container')
         body.innerHTML = ''
         let UserWelcome = document.createElement('p')
+        UserWelcome.setAttribute('user_id', this.images[0].id)
         UserWelcome.innerHTML = `<h1>Welcome back, ${this.name}!</h1>`
         body.append(UserWelcome)
+        console.log(body)
         this.renderImages()
         Image.newImageForm(this.id)
     }
