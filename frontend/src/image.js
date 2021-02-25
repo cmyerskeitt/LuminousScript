@@ -30,8 +30,7 @@ class Image {
                 <br><br>
             </form>`
         body.insertAdjacentHTML('beforeend', form)
-        console.log(body)
-       Image.makeImage(user_id)
+        Image.makeImage(user_id)
     }
 
     static makeImage(user_id){
@@ -46,7 +45,6 @@ class Image {
 
     createImageCard(){
         let card = document.createElement('p')
-            console.log(this)
             card.innerHTML=
             `<div data-id=${this.id}>
             <img src=${this.image_url} height="300" width="350">

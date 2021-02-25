@@ -31,7 +31,7 @@ class User {
         body.append(UserWelcome)
         console.log(body)
         this.renderImages()
-        Image.newImageForm(this.id)
+        Image.newImageForm(this.images[0].user_id)
     }
 
     renderImages(){
