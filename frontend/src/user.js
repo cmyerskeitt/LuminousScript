@@ -3,8 +3,8 @@ class User {
 
     constructor(user){
         this.id = user.id
-        this.name = user.name
-        this.images = user.images
+        this.name = user.attributes.name
+        this.images = user.attributes.images
         User.allUsers.push(this)
     }
 
@@ -15,28 +15,29 @@ class User {
             apiService.locateOrCreateUser(e)
             .then(user => {
                 console.log(user)
-                let newUser = new User(user.data.attributes)
+                let newUser = new User(user.data)
+                console.log(newUser)
                 newUser.showUser()
             })
         })
     }
 
     showUser(){
-        console.log(this)
         let body = document.querySelector('#user-container')
         body.innerHTML = ''
-        let UserWelcome = document.createElement('p')
-        UserWelcome.setAttribute('user_id', this.images[0].id)
-        UserWelcome.innerHTML = `<h1>Welcome back, ${this.name}!</h1>`
-        body.append(UserWelcome)
-        console.log(body)
+        let userWelcome = document.createElement('p')
+        userWelcome.innerHTML = `<h1>Welcome back, ${this.name}!</h1>`
+        body.append(userWelcome)
         this.renderImages()
-        Image.newImageForm(this.images[0].user_id)
+        console.log(this)
+        Image.newImageForm(this.id)
+        // Image.newImageForm(this.images[0].user_id)
+        
+        //how do I pass in the user_id for for new users here
     }
 
     renderImages(){
         if (this.images){
-
             this.images.forEach(function(image){
                 console.log(image)
                 let newImage = new Image(image)

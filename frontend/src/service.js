@@ -25,6 +25,7 @@ class ApiService {
     }
 
     postImage(e, user_id){
+         console.log(e)
      return fetch(`${this.baseUrl}/images`, {
         method: "POST",
         headers: {

@@ -7,7 +7,6 @@ class Image {
         this.image_url = image.image_url
         this.caption = image.caption
         this.user_id = image.user_id
-        console.log(image)
         Image.allImages.push(this)
     }
 
@@ -40,7 +39,9 @@ class Image {
             apiService.postImage(e, user_id)
             .then (json => {
                 console.log(json)
-                
+                newForm.reset()
+                let newImage = new Image(json)
+                newImage.createImageCard()
             })
             
         })
