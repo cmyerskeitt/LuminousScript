@@ -54,7 +54,7 @@ class Image {
             `<div data-id=${this.id}>
             <img src=${this.image_url} height="300" width="350">
             <h3>${this.caption}</h3>
-            <button data-id=${this.id}>delete</button>
+            // <button data-id=${this.id}>delete</button>
             </div>`
         this.appendImages(card)
         
@@ -63,6 +63,15 @@ class Image {
     appendImages(card){
         let images = document.getElementsByClassName('image-form-container')
         images[0].append(card)
+        let button = document.getElementById(`${this.id}`)
+        this.delete(button)
+    }
+
+    delete(button){
+        button.addEventListener('click', function(e){
+            e.preventDefault()
+            apiService.deleteProblem(e)
+        })
     }
 }
 

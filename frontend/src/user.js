@@ -31,9 +31,6 @@ class User {
         this.renderImages()
         console.log(this)
         Image.newImageForm(this.id)
-        // Image.newImageForm(this.images[0].user_id)
-        
-        //how do I pass in the user_id for for new users here
     }
 
     renderImages(){
