@@ -31,6 +31,7 @@ class User {
         this.renderImages()
         console.log(this)
         Image.newImageForm(this.id)
+        this.logout()
     }
 
     renderImages(){
@@ -42,6 +43,14 @@ class User {
                 newImage.createImageCard()
             })
         }
+    }
+
+    logout(){
+      let logoutButton = document.createElement("button")
+      logoutButton.innerHTML = `<id="${this.id}" class="logout"> Logout</button>`
+      let page = document.getElementsByClassName('logout-form-container')[0]
+      page.appendChild(logoutButton)
+      
     }
 
 
