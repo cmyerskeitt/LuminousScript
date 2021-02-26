@@ -73,7 +73,8 @@ class Image {
     delete(button){
         button.addEventListener('click', function(e){
             e.preventDefault()
-            apiService.deleteProblem(e) 
+            apiService.deleteImage(e) 
+                e.target.parentElement.remove()
         })
     }
 }

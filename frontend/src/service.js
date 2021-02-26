@@ -42,4 +42,11 @@ class ApiService {
         })
          .then(resp => resp.json())
     }
+
+    deleteImage(e){
+        fetch(`${this.baseUrl}/images/${e.target.parentNode.dataset.id}`,{
+            method: "DELETE"
+        })
+    }
+
 }    
