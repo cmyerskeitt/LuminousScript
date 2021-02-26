@@ -50,13 +50,16 @@ class Image {
 
     createImageCard(){
         let card = document.createElement('p')
+            card.setAttribute('data-id', this.id)
             card.innerHTML=
-            `<div data-id=${this.id}>
-            <img src=${this.image_url} height="300" width="350">
+           ` <img src=${this.image_url} height="300" width="350">
             <h3>${this.caption}</h3>
-            // <button data-id=${this.id}>delete</button>
             </div>`
-        this.appendImages(card)
+            let deleteForm = `<button type="button" id="${this.id}" class="delete-image"> Delete</button>`
+            card.insertAdjacentHTML('beforeend', deleteForm)
+            this.appendImages(card)
+
+       
         
     }
 
@@ -70,7 +73,7 @@ class Image {
     delete(button){
         button.addEventListener('click', function(e){
             e.preventDefault()
-            apiService.deleteProblem(e)
+            apiService.deleteProblem(e) 
         })
     }
 }
