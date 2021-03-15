@@ -11,6 +11,7 @@ class Api::V1::ImagesController < ApplicationController
         else 
             render json: {errors: image.errors.full_messages}, status: :unprocessible_entity
         end 
+
     end 
 
     def show

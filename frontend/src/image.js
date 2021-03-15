@@ -52,7 +52,7 @@ class Image {
         let card = document.createElement('p')
             card.setAttribute('data-id', this.id)
             card.innerHTML=
-           ` <img src=${this.image_url} height="300" width="350">
+           ` <img src=${this.image_url} height="500" width="550">
             <h3>${this.caption}</h3>
             </div>`
             let deleteForm = `<button type="button" id="${this.id}" class="delete-image"> Delete</button>`
