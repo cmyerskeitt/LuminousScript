@@ -17,9 +17,9 @@ class ApiService {
                 }
             })
         })
-        .then(resp =>{
+        .then(resp => {
             let json = resp.json()
-            console.log(json)
+            // console.log(json)
             return json
         })
     }

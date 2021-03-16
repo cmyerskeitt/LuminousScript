@@ -14,9 +14,7 @@ class User {
             e.preventDefault()
             apiService.locateOrCreateUser(e)
             .then(user => {
-                console.log(user)
                 let newUser = new User(user.data)
-                console.log(newUser)
                 newUser.showUser()
             })
         })
@@ -26,20 +24,19 @@ class User {
         let body = document.querySelector('#user-container')
         body.innerHTML = ''
         let userWelcome = document.createElement('p')
-        userWelcome.innerHTML = `<h1>Welcome back, ${this.name}!</h1>`
+        userWelcome.innerHTML = `<h1>Welcome, ${this.name}!</h1>`
         body.append(userWelcome)
         this.renderImages()
-        console.log(this)
+        // console.log(this)
         Image.newImageForm(this.id)
+        Image.filterImages()
         this.logout()
     }
 
     renderImages(){
         if (this.images){
             this.images.forEach(function(image){
-                console.log(image)
                 let newImage = new Image(image)
-                console.log(newImage)
                 newImage.createImageCard()
             })
         }

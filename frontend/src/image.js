@@ -11,7 +11,7 @@ class Image {
     }
 
     static newImageForm(user_id){
-        console.log(this)
+        // console.log(this)
         let body = document.querySelector('#user-container')
         let form = 
             `<form id="add-image-form" style="">
@@ -52,9 +52,8 @@ class Image {
         let card = document.createElement('p')
             card.setAttribute('data-id', this.id)
             card.innerHTML=
-           ` <img src=${this.image_url} height="500" width="550">
-            <h3>${this.caption}</h3>
-            </div>`
+           `<img src=${this.image_url} height="500" width="550">
+            <h3>${this.caption}</h3>`
             let deleteForm = `<button type="button" id="${this.id}" class="delete-image"> Delete</button>`
             card.insertAdjacentHTML('beforeend', deleteForm)
             this.appendImages(card)
@@ -77,6 +76,32 @@ class Image {
                 e.target.parentElement.remove()
         })
     }
+
+    static filterImages(){
+        let body = document.getElementsByClassName('image-form-container')[0]
+        let form= 
+        `<form id="filter-form" style="">
+          <label> Enter a keyword to filter your photos: </label>
+          <input id='input-filter' type="text" name="name" value="" class='input-filter'>
+         <input id='filter-button' type='submit' name='Filter' value='Filter On/Filter Offgot ' class="filter">
+        </form>`
+        body.insertAdjacentHTML('afterbegin', form)
+        let filterForm = document.getElementById('filter-form')
+        filterForm.addEventListener('submit', function(e){
+            e.preventDefault()
+            console.log(e)
+            let substring = e.target.children[1].value
+            let results = Image.allImages.filter(image => image.caption.toLowerCase().includes(substring.toLowerCase()))
+            let body = document.getElementsByClassName('image-form-container')[0]
+            while (body.childNodes.length > 1){
+                body.removeChild(body.lastChild)
+            }
+            filterForm.reset()
+            results.forEach(image => image.createImageCard())
+            
+        })
+    }
+
 }
 
 
