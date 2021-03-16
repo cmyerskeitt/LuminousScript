@@ -83,13 +83,13 @@ class Image {
         `<form id="filter-form" style="">
           <label> Enter a keyword to filter your photos: </label>
           <input id='input-filter' type="text" name="name" value="" class='input-filter'>
-         <input id='filter-button' type='submit' name='Filter' value='Filter On/Filter Offgot ' class="filter">
+         <input id='filter-button' type='submit' name='Filter' value='Filter On/Filter Off' class="filter">
         </form>`
         body.insertAdjacentHTML('afterbegin', form)
         let filterForm = document.getElementById('filter-form')
         filterForm.addEventListener('submit', function(e){
             e.preventDefault()
-            console.log(e)
+            // console.log(e)
             let substring = e.target.children[1].value
             let results = Image.allImages.filter(image => image.caption.toLowerCase().includes(substring.toLowerCase()))
             let body = document.getElementsByClassName('image-form-container')[0]
