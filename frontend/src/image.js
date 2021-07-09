@@ -98,7 +98,6 @@ class Image {
             }
             filterForm.reset()
             results.forEach(image => image.createImageCard())
-            
         })
     }
 
