@@ -14,18 +14,15 @@ class Image {
         // console.log(this)
         let body = document.querySelector('#user-container')
         let form = 
-            `<form id="add-image-form" style="">
-                <h3>Add a Lumunious Image!</h3>
+            `<form id="add-image-form" style="color: red; background-color: white; font-family: Segoe UI,Arial,sans-serif; font-size:20px; margin:10px 0">
+                <h3>Add A Luminous Image!</h3>
                 <label>Image Url:</label>
-                <input id='input-url' type="text" name="image" value=""
-                placeholder="Enter your image URL here." class="input-text">
+                <input id='input-url' type="text" name="image" value="" placeholder="Enter image URL here." class="input-text">
                 <br><br>
                 <label>Caption:</label>
-                <input id='input-caption' type="text" name="caption" value=""
-                placeholder="Enter your caption here." class="input-text">
+                <input id='input-caption' type="text" name="caption" value="" placeholder="Enter caption here." class="input-text">
                 <br><br>
-                <input id= "create-button" type="submit" name="submit" value="Create Luminous Image"
-                class="submit">
+                <input id= "create-button" type="submit" name="submit" value="Create A Luminous Image" style="color: white; background-color: red" class="submit">
                 <br><br>
             </form>`
         body.insertAdjacentHTML('beforeend', form)

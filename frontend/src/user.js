@@ -24,7 +24,7 @@ class User {
         let body = document.querySelector('#user-container')
         body.innerHTML = ''
         let userWelcome = document.createElement('p')
-        userWelcome.innerHTML = `<h1>Welcome, ${this.name}!</h1>`
+        userWelcome.innerHTML = `<h1 color: white; font-family: Segoe UI,Arial,sans-serif; font-weight:400; margin:10px 0>Welcome, ${this.name}!</h1>`
         body.append(userWelcome)
         this.renderImages()
         // console.log(this)
