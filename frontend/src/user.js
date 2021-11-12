@@ -44,7 +44,7 @@ class User {
 
     logout(){
     let logoutButton = document.createElement("button")
-      logoutButton.innerHTML = `<id="${this.id}" class="logout"> Logout</button>`
+      logoutButton.innerHTML = `<id="${this.id}" class="logout" style="color: white; font-size: 25px; background-color: blue"> Logout</button>`
       let page = document.getElementsByClassName('logout-form-container')[0]
       page.appendChild(logoutButton)
       logoutButton.addEventListener('click', function(e){

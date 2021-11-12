@@ -50,8 +50,8 @@ class Image {
             card.setAttribute('data-id', this.id)
             card.innerHTML=
            `<img src=${this.image_url} height="500" width="550">
-            <h3>${this.caption}</h3>`
-            let deleteForm = `<button type="button" id="${this.id}" class="delete-image"> Delete</button>`
+            <h3 style="color: red; background-color: blue">${this.caption}</h3>`
+            let deleteForm = `<button type="button" id="${this.id}" class="delete-image" style="color: white; font-size:20px; background-color: red" > Delete</button>`
             card.insertAdjacentHTML('beforeend', deleteForm)
             this.appendImages(card)
 
@@ -77,10 +77,10 @@ class Image {
     static filterImages(){
         let body = document.getElementsByClassName('image-form-container')[0]
         let form= 
-        `<form id="filter-form" style="">
+        `<form id="filter-form" style="color: red; background-color: white; font-family: Segoe UI,Arial,sans-serif; font-size:20px; bottom: 600px">
           <label> Enter a keyword to filter your photos: </label>
           <input id='input-filter' type="text" name="name" value="" class='input-filter'>
-         <input id='filter-button' type='submit' name='Filter' value='Filter On/Filter Off' class="filter">
+         <input id='filter-button' type='submit' name='Filter' value='Filter On/Filter Off' class="filter" style="color: white; background-color: red">
         </form>`
         body.insertAdjacentHTML('afterbegin', form)
         let filterForm = document.getElementById('filter-form')
