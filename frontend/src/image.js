@@ -14,7 +14,7 @@ class Image {
         // console.log(this)
         let body = document.querySelector('#user-container')
         let form = 
-            `<form id="add-image-form" style="color: red; background-color: white; font-family: Segoe UI,Arial,sans-serif; font-size:20px; margin:10px 0">
+            `<form id="add-image-form" style="color: red; background-color: white; border: solid; border-color: blue; font-family: Segoe UI,Arial,sans-serif; font-size:20px; margin:10px 0">
                 <h3>Add A Luminous Image!</h3>
                 <label>Image Url:</label>
                 <input id='input-url' type="text" name="image" value="" placeholder="Enter image URL here." class="input-text">
@@ -25,7 +25,7 @@ class Image {
                 <input id= "create-button" type="submit" name="submit" value="Create A Luminous Image" style="color: white; background-color: red" class="submit">
                 <br><br>
             </form>`
-        body.insertAdjacentHTML('beforeend', form)
+        body.insertAdjacentHTML('afterend', form)
         Image.makeImage(user_id)
     }
 
@@ -77,8 +77,9 @@ class Image {
     static filterImages(){
         let body = document.getElementsByClassName('image-form-container')[0]
         let form= 
-        `<form id="filter-form" style="color: red; background-color: white; font-family: Segoe UI,Arial,sans-serif; font-size:20px; bottom: 600px">
+        `<form id="filter-form" style="color: red; background-color: white; font-family: Segoe UI,Arial,sans-serif; font-size:20px">
           <label> Enter a keyword to filter your photos: </label>
+          <br>
           <input id='input-filter' type="text" name="name" value="" class='input-filter'>
          <input id='filter-button' type='submit' name='Filter' value='Filter On/Filter Off' class="filter" style="color: white; background-color: red">
         </form>`
@@ -86,7 +87,6 @@ class Image {
         let filterForm = document.getElementById('filter-form')
         filterForm.addEventListener('submit', function(e){
             e.preventDefault()
-            // console.log(e)
             let substring = e.target.children[1].value
             let results = Image.allImages.filter(image => image.caption.toLowerCase().includes(substring.toLowerCase()))
             let body = document.getElementsByClassName('image-form-container')[0]
