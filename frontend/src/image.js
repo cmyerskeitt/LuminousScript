@@ -80,15 +80,19 @@ class Image {
         `<form id="filter-form" style="color: red; background-color: white; font-family: Segoe UI,Arial,sans-serif; font-size:20px">
           <label> Enter a keyword to filter your photos: </label>
           <br>
-          <input id='input-filter' type="text" name="name" value="" class='input-filter'>
-         <input id='filter-button' type='submit' name='Filter' value='Filter On/Filter Off' class="filter" style="color: white; background-color: red">
+          <input id='input-filter' type='text' value="" class='input-filter'>
+          <input id='filter-button' type='submit' name='Filter' value='On/Off' class="filter" style="color: white; background-color: red">
         </form>`
         body.insertAdjacentHTML('afterbegin', form)
         let filterForm = document.getElementById('filter-form')
         filterForm.addEventListener('submit', function(e){
             e.preventDefault()
-            let substring = e.target.children[1].value
+            console.log(e)
+            console.log(filterForm)
+            let substring = e.target.children[2].value
+            console.log(substring)
             let results = Image.allImages.filter(image => image.caption.toLowerCase().includes(substring.toLowerCase()))
+            console.log(results)
             let body = document.getElementsByClassName('image-form-container')[0]
             while (body.childNodes.length > 1){
                 body.removeChild(body.lastChild)
